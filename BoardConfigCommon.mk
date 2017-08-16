@@ -50,6 +50,8 @@ BOARD_HARDWARE_CLASS := $(DEVICE_PATH)/cmhw
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Kernel informations
+# NOTE: Only merge this if you have the initlogo hacks by r3pwn in the Lumia 720 tree!
+BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/boot/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_CMDLINE := \
@@ -60,7 +62,6 @@ BOARD_KERNEL_CMDLINE := \
     msm_rtb.filter=0x3F \
     ehci-hcd.park=3 \
     androidboot.bootdevice=msm_sdcc.1
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 
 # Kernel properties
 TARGET_KERNEL_SOURCE := kernel/nokia/msm8x27
