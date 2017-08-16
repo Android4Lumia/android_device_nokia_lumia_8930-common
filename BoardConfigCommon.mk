@@ -31,6 +31,7 @@ PRODUCT_MANUFACTURER := Nokia
 # Unified device
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_dpp
+TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_dpp.cpp
 
 # Storage information
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01400000
