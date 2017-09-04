@@ -110,3 +110,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     wlan.driver.ath=0
 
+# OTA properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    cm.updater.uri=http://sjrota.ddns.net/LineageOTA/api
