@@ -100,6 +100,9 @@ WPA_SUPPLICANT_VERSION           := VER_0_8_X
 BOARD_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy
 
+# LOW RAM
+MALLOC_SVELTE := true
+
 # TWRP (optional)
 ifeq ($(RECOVERY_VARIANT),twrp)
 TW_THEME := portrait_mdpi

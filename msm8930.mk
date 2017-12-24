@@ -110,6 +110,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     wlan.driver.ath=0
 
+# Low RAM options -For the really low-memory devices disable JIT by setting cache size to zero
+# Low memory device - Disable atlas services on low-ram targets, Enable smooth streaming 
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.config.low_ram=true
+     dalvik.vm.jit.codecachesize=0
+     config.disable_atlas=true
+     mm.enable.smoothstreaming=true
+    ro.sys.fw.bg_apps_limit=5
+
 # OTA properties
 PRODUCT_PROPERTY_OVERRIDES += \
     cm.updater.uri=http://sjrota.ddns.net/LineageOTA/api
