@@ -29,9 +29,9 @@ BOARD_VENDOR := nokia
 PRODUCT_BRAND := Nokia
 PRODUCT_MANUFACTURER := Nokia
 
-# Unified device
-TARGET_UNIFIED_DEVICE := true
+# init
 TARGET_INIT_VENDOR_LIB := libinit_dpp
+TARGET_RECOVERY_DEVICE_MODULES := libinit_dpp
 
 # Storage information
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01400000
@@ -83,6 +83,9 @@ TARGET_POWERHAL_VARIANT := qcom
 # Qualcomm sepolicies
 include device/qcom/sepolicy/sepolicy.mk
 
+#FM Radio
+BOARD_HAVE_QCOM_FM := true
+
 # WiFi
 BOARD_HAS_QCOM_WLAN              := true
 BOARD_WLAN_DEVICE                := qcwcn
@@ -108,4 +111,7 @@ ifeq ($(RECOVERY_VARIANT),twrp)
 TW_THEME := portrait_mdpi
 RECOVERY_SDCARD_ON_DATA := true
 TW_NO_USB_STORAGE := true
+TW_USE_TOYBOX := true
+TW_USE_TOOLBOX := false
+TW_NO_LEGACY_PROPS := true
 endif
