@@ -113,5 +113,5 @@ RECOVERY_SDCARD_ON_DATA := true
 TW_NO_USB_STORAGE := true
 TW_USE_TOYBOX := true
 TW_USE_TOOLBOX := false
-TW_NO_LEGACY_PROPS := true
+TW_NO_LEGACY_PROPS := false
 endif
